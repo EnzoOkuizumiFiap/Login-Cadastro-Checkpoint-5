@@ -5,7 +5,7 @@ export default function Menu(){
     return(
         <nav className="menu">
             <Link to="/">Home</Link>
-            <Link to="/cadastro-login">Cadastro</Link>
+            <Link to="/login">Entrar</Link>
         </nav>
     );
 }
