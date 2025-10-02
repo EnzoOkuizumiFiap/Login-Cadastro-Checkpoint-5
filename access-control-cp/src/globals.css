@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root{
+    scroll-behavior:smooth;
+}
+
+@layer {
+    & header{
+        @apply w-screen flex bg-blue-300 py-3 ;
+
+        & h1{
+            @apply w-50 text-3xl font-bold;
+        }
+
+        & .menu{
+            @apply w-full flex justify-around;
+
+            & a{
+            @apply bg-blue-300 px-6 py-3 text-center border-2 rounded-[5px] m-auto;
+            
+                &:hover{
+                    @apply underline bg-blue-500;
+                }
+            }
+        }            
+    }
+}
