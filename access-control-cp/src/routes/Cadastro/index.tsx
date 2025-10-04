@@ -4,23 +4,24 @@ import { useNavigate } from "react-router-dom";
 const API_URL = import.meta.env.VITE_API_URL_USUARIOS;
 
 export default function Cadastro() {
-  const navigate = useNavigate();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<TipoUser>({
-    mode: "onChange",
-  });
+   const navigate = useNavigate();
 
-  const onSubmit = handleSubmit(async (data: TipoUser) => {
+    const {register,handleSubmit,formState:{errors} } = useForm<TipoUser>({
+        mode:"onChange"
+    });
+
+    const onSubmit = handleSubmit(async (data:TipoUser) => {
+
     await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
+    });
+    alert("Usuário logado com sucesso!");
+    navigate("/");
     });
 
   return (
