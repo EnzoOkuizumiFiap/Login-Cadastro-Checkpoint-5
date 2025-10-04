@@ -4,24 +4,36 @@
     scroll-behavior:smooth;
 }
 
-@layer {
-    & header{
-        @apply w-screen flex bg-blue-300 py-3 ;
+@layer{
+    .container{
+        @apply w-screen flex flex-col justify-between h-screen;
 
-        & h1{
-            @apply w-50 text-3xl font-bold ml-3;
+        & header{
+            @apply w-screen flex flex-col bg-blue-300 py-3 mb-6 text-center;
+
+            & h1{
+                @apply text-3xl font-bold;
+            }
+
+            & .menu{
+                @apply w-screen flex justify-around;
+
+                & a{
+                @apply bg-blue-300 px-6 py-3 text-center border-2 rounded-[5px] m-auto;
+                
+                    &:hover{
+                        @apply underline bg-blue-500;
+                    }
+                }
+            }            
         }
 
-        & .menu{
-            @apply w-full flex justify-around;
+        & footer{
+            @apply w-screen flex flex-col bg-blue-300 py-3 mb-6 text-center;
 
-            & a{
-            @apply bg-blue-300 px-6 py-3 text-center border-2 rounded-[5px] m-auto;
-            
-                &:hover{
-                    @apply underline bg-blue-500;
-                }
+            & p{
+                @apply text-lg font-bold;
             }
-        }            
+        }
     }
 }
