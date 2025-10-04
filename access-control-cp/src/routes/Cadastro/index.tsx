@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Cadastro() {
+
+    const navigate = useNavigate();
+
   return (
     <main>
       <h1>Criar uma conta</h1>
