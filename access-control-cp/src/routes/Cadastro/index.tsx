@@ -1,3 +1,5 @@
+import { useForm } from "react-hook-form";
+import type { TipoUser } from "../../types/tipoUser";
 import { useNavigate } from "react-router-dom";
 import { TipoUser } from "../../types/tipoUser";
 import { useForm } from "react-hook-form";
@@ -65,9 +67,7 @@ export default function Cadastro() {
             <div>
               <button type="submit">Criar conta</button>
             </div>
-          </fieldset>
-        </form>
-      </div>
-    </main>
-  );
+
+        </main>
+    );
 }
