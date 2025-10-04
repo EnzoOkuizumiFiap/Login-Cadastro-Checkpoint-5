@@ -4,15 +4,15 @@
     scroll-behavior:smooth;
 }
 
-@layer {
-    .container {
+@layer{
+    .container{
         @apply w-screen flex flex-col justify-between h-screen;
 
         & header{
-            @apply w-screen flex bg-blue-300 py-3;
+            @apply w-screen flex flex-col bg-blue-300 py-3 text-center;
 
             & h1{
-                @apply w-50 text-3xl font-bold ml-3;
+                @apply text-3xl font-bold;
             }
 
             & .menu{
@@ -28,11 +28,47 @@
             }            
         }
 
+        & main{
+            @apply w-screen flex flex-col items-center justify-center flex-1;
+
+            & h1{
+                @apply text-3xl font-bold;
+            }
+        }
+
         & footer{
-            @apply w-screen flex flex-col bg-blue-300 py-4 text-center;
+            @apply w-screen flex flex-col bg-blue-300 py-3 mb-6 text-center;
 
             & p{
                 @apply text-lg font-bold;
+            }
+        }
+    }
+
+    .logarUser, .cadastrarUser{
+        @apply gap-4 p-4 border-2 m-4 bg-white rounded-lg w-full;
+
+        & fieldset{
+            @apply flex flex-col gap-4 border-2 p-4 rounded-lg;
+
+            & legend{
+                @apply text-lg font-bold;
+            }
+
+            & div{
+                @apply flex flex-col gap-2;
+
+                & label{
+                    @apply font-semibold;
+                }
+
+                & input,select,textarea{
+                    @apply border-2 rounded-md p-2;
+                }
+            }
+
+            & button{
+                @apply w-[50%] h-[8vh] mx-auto bg-blue-500 text-white text-2xl font-bold py-2 px-4 rounded hover:bg-blue-700;
             }
         }
     }

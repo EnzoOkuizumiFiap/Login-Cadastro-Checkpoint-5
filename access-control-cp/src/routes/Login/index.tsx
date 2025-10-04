@@ -1,12 +1,37 @@
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import type { TipoUser } from "../../types/tipoUser";
+const API_URL = import.meta.env.VITE_API_URL_USUARIOS;
+
 export default function Cadastro() {
+
+   const navigate = useNavigate();
+
+    const {register,handleSubmit,formState:{errors} } = useForm<TipoUser>({
+        mode:"onChange"
+    });
+
+    const onSubmit = handleSubmit(async (data:TipoUser) => {
+
+    await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    alert("Usuário logado com sucesso!");
+    navigate("/");
+    });
+
     return(
         <main>
-            <h1>Página de Cadastro</h1>
+            <h1>Entrar na sua conta</h1>
 
             <div className="mx-auto w-[40%]">
-                <form onSubmit={onSubmit} className="frmLogin">
+                <form onSubmit={onSubmit} className="logarUser">
                     <fieldset>
-                        <legend>Se Cadastre no sistema</legend>
+                        <legend>Entre no sistema</legend>
                         <div>
                             <label htmlFor="idNome">Nome:</label>
                             <input type="text" id="idNome" className="bg-amber-200" {...register("nome", { required: true ,maxLength: 200})} aria-invalid={!!errors.nome} aria-describedby={errors.nome ? "nome-error" : undefined} /> {errors.nome && <span role="alert" id="nome-error" className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2">{errors.nome.message}</span>}
