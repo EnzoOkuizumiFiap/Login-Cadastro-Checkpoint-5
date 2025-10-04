@@ -12,8 +12,8 @@ import Error from './routes/Error/index.tsx'
 const router = createBrowserRouter([
   {path:"/", element: <App/>, errorElement:<Error/>, children:[
     {path:"/", element:<Home/>},
-    {path:"cadastro", element:<Cadastro/>},
-    {path:"login", element:<Login />},
+    {path:"/login", element:<Login />},
+    {path:"/cadastro", element:<Cadastro/>},
   ]}
 ])
 
