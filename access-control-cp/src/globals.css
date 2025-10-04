@@ -12,7 +12,7 @@
             @apply w-screen flex bg-blue-300 py-3;
 
             & h1{
-                @apply w-50 text-3xl font-bold ml-3;
+                @apply text-3xl font-bold ml-3;
             }
 
             & .menu{
