@@ -1,12 +1,36 @@
+import { useForm } from "react-hook-form";
+import type { TipoUser } from "../../types/tipoUser";
 import { useNavigate } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL_USUARIOS as string;
 
 export default function Cadastro() {
+
+    const navigate = useNavigate();
+
+    const {register,handleSubmit,formState:{errors} } = useForm<TipoUser>({
+        mode:"onChange"
+    });
+
+    const onSubmit = handleSubmit(async (data:TipoUser) => {
+
+        await fetch(API_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+        });
+
+        navigate("/login");
+    });
+
+
     return(
         <main>
             <h1>Página de Cadastro</h1>
 
             <div className="mx-auto w-[40%]">
-                <form onSubmit={onSubmit} className="frmLogin">
+                <form onSubmit={onSubmit} className="frmCadastro">
                     <fieldset>
                         <legend>Se Cadastre no sistema</legend>
                         <div>
