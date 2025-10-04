@@ -4,15 +4,15 @@
     scroll-behavior:smooth;
 }
 
-@layer{
-    .container{
+@layer {
+    .container {
         @apply w-screen flex flex-col justify-between h-screen;
 
         & header{
             @apply w-screen flex flex-col bg-blue-300 py-3 text-center;
 
             & h1{
-                @apply text-3xl font-bold;
+                @apply w-50 text-3xl font-bold ml-3;
             }
 
             & .menu{
@@ -37,7 +37,7 @@
         }
 
         & footer{
-            @apply w-screen flex flex-col bg-blue-300 py-3 mb-6 text-center;
+            @apply w-screen flex flex-col bg-blue-300 py-4 text-center;
 
             & p{
                 @apply text-lg font-bold;
