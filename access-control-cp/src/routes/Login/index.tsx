@@ -41,7 +41,7 @@ export default function Login() {
 
     return(
         <main>
-            <h1>Página de Login</h1>
+         <h1  className="text-center text-3xl font-bold">Página de Login</h1>
 
             <div className="mx-auto">
                 <form onSubmit={onSubmit} className="frmLogin">
