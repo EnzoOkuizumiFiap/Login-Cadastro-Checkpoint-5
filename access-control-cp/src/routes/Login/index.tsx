@@ -8,7 +8,7 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const {register,handleSubmit,formState:{errors} } = useForm<TipoUser>({
+    const {register,handleSubmit,formState:{errors}, reset } = useForm<TipoUser>({
         mode:"onChange"
     });
 
@@ -29,6 +29,7 @@ export default function Login() {
                 navigate("/");
             } else {
                 alert("Usuário ou E-mail Inválido.")
+                reset();
             }
 
         } catch (error) {
@@ -52,7 +53,7 @@ export default function Login() {
                         </div>
                         <div>
                             <label htmlFor="idEmail">Email:</label>
-                            <input type="email" id="idEmail" className="bg-amber-200" {...register("email", { required:"Insira Email do usuário" })} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} /> {errors.email && <span role="alert" id="email-error" className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2">{errors.email.message}</span>}
+                            <input type="email" id="idEmail" className="bg-amber-200" {...register("email", { required: "Insira Email do usuário", pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Formato de email inválido" } })} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} /> {errors.email && <span role="alert" id="email-error" className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2">{errors.email.message}</span>}
                         </div>
                         
                         <div>
