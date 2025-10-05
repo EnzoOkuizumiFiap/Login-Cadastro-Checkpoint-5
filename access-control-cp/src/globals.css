@@ -29,7 +29,7 @@
         }
 
         & footer{
-            @apply w-full flex flex-col bg-blue-300 py-4 text-center;
+            @apply w-full bg-blue-300 py-4 text-center;
 
             & p{
                 @apply text-lg font-bold;
