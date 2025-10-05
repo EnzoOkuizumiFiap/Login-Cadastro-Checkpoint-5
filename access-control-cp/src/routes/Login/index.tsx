@@ -26,7 +26,7 @@ export default function Login() {
 
             if(usuarioValido) {
                 localStorage.setItem("usuarioLogado", JSON.stringify(usuarioValido))
-                navigate("/");
+                navigate("/home");
             } else {
                 alert("Usuário ou E-mail Inválido.")
                 reset();

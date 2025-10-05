@@ -43,7 +43,7 @@ export default function Cadastro() {
                 throw new Error("Erro ao cadastrar usuário");
             }
 
-            navigate("/login");
+            navigate("/");
         } catch (error) {
             console.error("Erro no cadastro:", error);
             alert("Erro ao Cadastrar. Tente novamente");
