@@ -42,7 +42,7 @@ export default function Login() {
 
     return(
         <main>
-            <h1>Página de Login</h1>
+            <h1 className="text-center font-bold text-3xl">Página de Login</h1>
 
             <div className="mx-auto">
                 <form onSubmit={onSubmit} className="frmLogin">
@@ -62,7 +62,7 @@ export default function Login() {
                         </div>
 
                         <div>
-                            <p>Caso não tenha um Usuário, clique em <Link to="/cadastro">Cadastrar-se</Link></p>
+                            <p>Caso não tenha um Usuário, clique em <Link to="/cadastro" className="hover:underline hover:text-blue-500">Cadastrar-se</Link></p>
                         </div>
                     </fieldset>
                 </form>

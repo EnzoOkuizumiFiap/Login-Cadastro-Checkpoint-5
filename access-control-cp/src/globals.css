@@ -6,30 +6,62 @@
 
 @layer {
     .container {
-        @apply w-screen flex flex-col justify-between h-screen;
+        @apply flex flex-col justify-between max-w-screen h-screen;
 
         & header{
-            @apply w-screen flex bg-blue-300 py-3;
+            @apply w-full flex bg-blue-300 py-3;
 
             & h1{
                 @apply w-50 text-3xl font-bold ml-3;
             }
 
             & .menu{
-                @apply w-screen flex justify-around;
+                @apply w-full flex justify-around;
 
                 & a{
                 @apply bg-blue-300 px-6 py-3 text-center border-2 rounded-[5px] m-auto;
                 
                     &:hover{
-                        @apply underline bg-blue-500;
+                        @apply underline bg-blue-400;
                     }
                 }
             }            
         }
 
+        & .frmLogin, .frmCadastro {
+            @apply gap-4 p-4 m-4 bg-white rounded-lg w-3xl mx-auto;
+
+            & fieldset {
+                @apply flex flex-col gap-4 border-2 p-4 rounded-lg;
+
+                & legend{
+                    @apply text-lg font-bold;
+                }
+
+                & div{
+                    @apply flex flex-col gap-2;
+
+                    & label{
+                        @apply font-semibold;
+                    }
+
+                    & input,select,textarea{
+                        @apply border-2 rounded-md p-2;
+                    }
+                }
+
+                & button{
+                    @apply mx-auto bg-blue-500 text-white text-2xl font-bold py-5 px-20 rounded hover:bg-blue-700 cursor-pointer;
+                }
+            }
+        }
+
+        & .logado {
+            @apply text-center;
+        }
+
         & footer{
-            @apply w-screen flex flex-col bg-blue-300 py-4 text-center;
+            @apply w-full flex flex-col bg-blue-300 py-4 text-center;
 
             & p{
                 @apply text-lg font-bold;
