@@ -46,7 +46,6 @@ export default function Cadastro() {
 
             navigate("/");
         } catch (error) {
-            console.error("Erro no cadastro:", error);
             alert("Erro ao Cadastrar. Tente novamente");
         }
 

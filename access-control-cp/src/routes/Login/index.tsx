@@ -34,7 +34,6 @@ export default function Login() {
             }
 
         } catch (error) {
-            console.error("Erro no Login:", error)
             alert("Erro ao logar. Tente novamente.");
         }
     });
