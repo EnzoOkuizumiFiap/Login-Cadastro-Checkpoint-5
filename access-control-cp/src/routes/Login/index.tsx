@@ -61,7 +61,7 @@ export default function Login() {
                         </div>
 
                         <div>
-                            <p>Caso não tenha um Usuário, clique em <Link to="/cadastro">Cadastrar-se</Link></p>
+                            <p>Caso não tenha um Usuário, clique em <Link to="/cadastro" className="hover:underline hover:text-blue-500">Cadastrar-se</Link></p>
                         </div>
                     </fieldset>
                 </form>
