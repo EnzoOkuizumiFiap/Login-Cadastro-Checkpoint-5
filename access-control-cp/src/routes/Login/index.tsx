@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import type { TipoUser } from "../../types/tipoUser";
 import { useNavigate } from "react-router-dom";
+import Logado from "../../components/Logado/logado";
 const API_URL = import.meta.env.VITE_API_URL_USUARIOS;
 
 export default function Login() {
@@ -38,8 +39,6 @@ export default function Login() {
         }
     });
 
-    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
-
     return(
         <main>
             <h1>Página de Login</h1>
@@ -68,13 +67,7 @@ export default function Login() {
                 </form>
             </div>
 
-            <div className="logado">
-                {usuarioLogado ? (
-                    <p>Bem-vindo, {usuarioLogado.nomeUsuario} com email: {usuarioLogado.email}</p>
-                ) : (
-                    <p>Você não está logado.</p>
-                )}
-            </div>
+            <Logado/> 
 
         </main>
     );
