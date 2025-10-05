@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import type { TipoUser } from "../../types/tipoUser";
 import { useNavigate } from "react-router-dom";
+import Logado from "../../components/Logado/logado";
 const API_URL = import.meta.env.VITE_API_URL_USUARIOS;
 
 export default function Cadastro() {
@@ -52,8 +53,7 @@ export default function Cadastro() {
         
     });
 
-    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
-
+    
     return(
         <main>
             <h1>Página de Cadastro</h1>
@@ -84,13 +84,8 @@ export default function Cadastro() {
                 </form>
             </div>
 
-            <div className="logado">
-                {usuarioLogado ? (
-                    <p>Bem-vindo, {usuarioLogado.nomeUsuario} com email: {usuarioLogado.email}</p>
-                ) : (
-                    <p>Você não está logado.</p>
-                )}
-            </div>
+            <Logado/>
+
 
         </main>
     );
