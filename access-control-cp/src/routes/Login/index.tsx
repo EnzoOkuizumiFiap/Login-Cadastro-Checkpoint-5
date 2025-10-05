@@ -26,7 +26,7 @@ export default function Login() {
 
             if(usuarioValido) {
                 localStorage.setItem("usuarioLogado", JSON.stringify(usuarioValido))
-                navigate("/")
+                navigate("/");
             } else {
                 alert("Usuário ou E-mail Inválido.")
             }
@@ -35,8 +35,6 @@ export default function Login() {
             console.error("Erro no Login:", error)
             alert("Erro ao logar. Tente novamente.");
         }
-
-        navigate("/");
     });
 
 
