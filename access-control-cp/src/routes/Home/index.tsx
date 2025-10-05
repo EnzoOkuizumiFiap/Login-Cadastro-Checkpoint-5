@@ -1,13 +1,15 @@
-export default function Home(){
+export default function Home() {
+    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
 
-    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "{}");
-
-    return(
+    return (
         <main>
             <h1>Home</h1>
-            {/* Aqui vamos exibir o nome do Usuário e email */}
 
-            <p>Bem-vindo, {usuarioLogado.nomeUsuario} com email: {usuarioLogado.email}</p>
+            {usuarioLogado ? (
+                <p>Bem-vindo, {usuarioLogado.nomeUsuario} com email: {usuarioLogado.email}</p>
+            ) : (
+                <p>Você não está logado.</p>
+            )}
         </main>
     );
 }
