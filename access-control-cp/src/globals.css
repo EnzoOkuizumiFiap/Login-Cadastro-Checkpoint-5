@@ -6,7 +6,7 @@
 
 @layer {
     .container {
-        @apply w-screen flex flex-col justify-between h-screen;
+        @apply flex flex-col justify-between h-screen max-w-screen;
 
         & header{
             @apply w-screen flex bg-blue-300 py-3;
