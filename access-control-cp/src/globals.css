@@ -35,7 +35,7 @@
                 @apply flex flex-col gap-4 border-2 p-4 rounded-lg;
                 
                  & legend{
-                    @apply text-lg font-bold;
+                    @apply text-lg text-blue-100 font-bold;
                 }
             }
         }
