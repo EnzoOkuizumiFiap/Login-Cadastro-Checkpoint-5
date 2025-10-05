@@ -41,7 +41,11 @@
                     @apply flex flex-col gap-2;
                     
                     & label{
-                        @apply font-bold;
+                        @apply font-bold;    
+                    }
+                    
+                    & input,select,textarea{
+                        @apply border-2 rounded-md p-2;
                     }
                 }
             }
