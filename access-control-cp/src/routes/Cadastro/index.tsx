@@ -52,6 +52,7 @@ export default function Cadastro() {
         
     });
 
+    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
 
     return(
         <main>
@@ -81,6 +82,14 @@ export default function Cadastro() {
                         </div>
                     </fieldset>
                 </form>
+            </div>
+
+            <div className="logado">
+                {usuarioLogado ? (
+                    <p>Bem-vindo, {usuarioLogado.nomeUsuario} com email: {usuarioLogado.email}</p>
+                ) : (
+                    <p>Você não está logado.</p>
+                )}
             </div>
 
         </main>
