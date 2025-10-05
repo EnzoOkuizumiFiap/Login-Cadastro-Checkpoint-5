@@ -56,7 +56,7 @@ export default function Cadastro() {
     
     return(
         <main>
-            <h1>Página de Cadastro</h1>
+            <h1  className="text-center text-3xl font-bold">Página de Cadastro</h1>
 
             <div className="mx-auto">
                 <form onSubmit={onSubmit} className="frmCadastro">
