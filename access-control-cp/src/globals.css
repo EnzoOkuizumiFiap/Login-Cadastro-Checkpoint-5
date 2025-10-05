@@ -55,6 +55,10 @@
             }
         }
         
+        & .logado {
+            @apply text-center;
+        }
+
         & footer{
             @apply w-full bg-blue-300 py-4 text-center;
 
