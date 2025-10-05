@@ -27,7 +27,9 @@
                 }
             }            
         }
-
+        & .frmLogin, .frmCadastro {
+            @apply gap-4 p-4 m-4 bg-white rounded-lg w-3xl mx-auto;
+        }
         & footer{
             @apply w-full bg-blue-300 py-4 text-center;
 
