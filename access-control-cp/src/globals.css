@@ -39,6 +39,10 @@
                 }
                 & div{
                     @apply flex flex-col gap-2;
+                    
+                    & label{
+                        @apply font-bold;
+                    }
                 }
             }
         }
