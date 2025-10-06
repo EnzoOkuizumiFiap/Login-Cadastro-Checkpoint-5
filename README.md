@@ -90,7 +90,7 @@ O objetivo foi criar uma aplicação de controle de acesso com funcionalidades d
       <img src="https://media.licdn.com/dms/image/v2/D4D35AQFBpGJmyle4Lw/profile-framedphoto-shrink_400_400/B4DZdDEpOkHMAo-/0/1749176980706?e=1760284800&v=beta&t=YDpwKxKMU_VDS11k-BnUq7D2-cOptrMJ7jvSkKMGS6o" width="100px" alt="Foto de Lucas"/>
     </td>
     <td>Lucas Tavares Dagrosa</td>
-    <td>566422</td>
+    <td>563424</td>
     <td>1TDSPG</td>
     <td><a href="https://github.com/lucastdag">lucastdag</a></td>
     <td><a href="https://www.linkedin.com/in/lucastdagrosa/">Lucas Tavares Dagrosa</a></td>
