@@ -31,6 +31,15 @@ O objetivo foi criar uma aplicação de controle de acesso com funcionalidades d
     npm run dev
     ```
 
+---
+
+## Link do repositório
+
+[https://github.com/EnzoOkuizumiFiap/Login-Cadastro-Checkpoint-5](https://github.com/EnzoOkuizumiFiap/Login-Cadastro-Checkpoint-5)
+
+---
+
+
 ## Integrantes do Grupo
 
 ---
